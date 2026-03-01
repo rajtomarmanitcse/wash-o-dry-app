@@ -5,7 +5,7 @@ const AUTH_KEY = 'wash-o-dry-auth'
 // Valid users (username / password)
 const VALID_USERS = [
   { username: 'wash-o-dry', password: 'ddnagar@2026' },
-  { username: 'doctrdang', password: 'Rajtomar@123' },
+  { username: 'doctrdang', password: 'Rajtomar@1234' },
 ]
 
 const AuthContext = createContext(null)

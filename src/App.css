@@ -1,0 +1,264 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7280;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.logout-button:hover {
+  color: #dc2626;
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.qr-form,
+.qr-panel {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+  border: 1px solid #e5e7eb;
+}
+
+.qr-form h2,
+.qr-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.field input {
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb22;
+}
+
+.field input.input-error {
+  border-color: #dc2626;
+}
+
+.field input.input-error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.2);
+}
+
+.field-error {
+  display: block;
+  font-size: 0.8rem;
+  color: #dc2626;
+  margin-top: 0.25rem;
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.08s ease;
+}
+
+.primary-button {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  margin-top: 0.5rem;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.35);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+.secondary-button {
+  background: #111827;
+  color: #f9fafb;
+  margin-top: 1rem;
+}
+
+.secondary-button:hover {
+  background: #020617;
+  transform: translateY(-1px);
+}
+
+.qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.print-card {
+  border-radius: 0.9rem;
+  border: 1px dashed #cbd5f5;
+  padding: 1rem 1.25rem 1.25rem;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.print-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.4rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.small-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.qr-wrapper {
+  align-self: center;
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  background: white;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+.print-details {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.print-details p {
+  margin: 0.1rem 0;
+}
+
+.placeholder {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  #root {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .app,
+  .layout,
+  .qr-panel {
+    display: block;
+  }
+
+  .qr-form,
+  .app-header,
+  .no-print {
+    display: none !important;
+  }
+
+  .print-card {
+    border: none;
+    box-shadow: none;
+    background: white;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+  }
+
+  .print-details .no-print-detail {
+    display: none !important;
+  }
+
+  .print-details {
+    text-align: center;
+    width: 100%;
+  }
+
+  .print-name {
+    font-weight: 600;
+  }
+}

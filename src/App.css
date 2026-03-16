@@ -206,6 +206,18 @@
   margin: 0.1rem 0;
 }
 
+.print-row--primary {
+  font-weight: 700;
+}
+
+.print-label {
+  font-weight: 700;
+}
+
+.print-value {
+  font-weight: 600;
+}
+
 .placeholder {
   font-size: 0.85rem;
   color: #6b7280;
@@ -249,16 +261,19 @@
     align-items: center;
   }
 
-  .print-details .no-print-detail {
-    display: none !important;
-  }
-
   .print-details {
     text-align: center;
     width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.35;
   }
 
-  .print-name {
-    font-weight: 600;
+  .print-row {
+    margin: 0.25rem 0;
+  }
+
+  .print-row--primary {
+    font-size: 1.2rem;
+    margin-top: 0.4rem;
   }
 }

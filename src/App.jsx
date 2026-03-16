@@ -147,15 +147,18 @@ function App() {
                   <QRCode value={qrValue} size={180} />
                 </div>
                 <div className="print-details">
-                  <p className="print-name"><strong>Name:</strong> {displayData.name}</p>
-                  <p className="no-print-detail">
-                    <strong>Cloth:</strong> {displayData.cloth}
+                  <p className="print-row print-row--primary">
+                    <span className="print-label">Name:</span> <span className="print-value">{displayData.name}</span>
                   </p>
-                  <p className="no-print-detail">
-                    <strong>Date:</strong> {dateUsed}
+                  <p className="print-row">
+                    <span className="print-label">Cloth:</span> <span className="print-value">{displayData.cloth}</span>
                   </p>
-                  <p className="no-print-detail">
-                    <strong>Mobile:</strong> {displayData.mobile}
+                  <p className="print-row">
+                    <span className="print-label">Date:</span> <span className="print-value">{dateUsed}</span>
+                  </p>
+                  <p className="print-row">
+                    <span className="print-label">Mobile:</span>{' '}
+                    <span className="print-value">{displayData.mobile || '-'}</span>
                   </p>
                 </div>
               </>

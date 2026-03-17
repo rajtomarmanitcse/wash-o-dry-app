@@ -148,16 +148,15 @@ function App() {
                 </div>
                 <div className="print-details">
                   <p className="print-row print-row--primary">
-                    <span className="print-label">Name:</span> <span className="print-value">{displayData.name}</span>
+                    <span className="print-value">{displayData.name}</span>
                   </p>
                   <p className="print-row">
-                    <span className="print-label">Cloth:</span> <span className="print-value">{displayData.cloth}</span>
+                    <span className="print-value">{displayData.cloth}</span>
                   </p>
                   <p className="print-row">
-                    <span className="print-label">Date:</span> <span className="print-value">{dateUsed}</span>
+                    <span className="print-value">{dateUsed}</span>
                   </p>
                   <p className="print-row">
-                    <span className="print-label">Mobile:</span>{' '}
                     <span className="print-value">{displayData.mobile || '-'}</span>
                   </p>
                 </div>
